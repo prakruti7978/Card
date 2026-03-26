@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Cutu 💛</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+<div class="hearts">
+    <span style="left:10%">💛</span>
+    <span style="left:25%">💖</span>
+    <span style="left:40%">💕</span>
+    <span style="left:55%">💓</span>
+    <span style="left:70%">💗</span>
+    <span style="left:85%">💛</span>
+</div>
+
+<!-- 3D Envelope -->
+<div class="envelope-container" onclick="openCard()">
+    <div class="envelope">
+        <div class="front"></div>
+        <div class="flap"></div>
+    </div>
+    <p class="open-text">Tap to Open 💌</p>
+</div>
+
+<!-- Card -->
+<div class="card" id="card">
+    <h1>I Don’t Say This Enough</h1>
+    <p id="poem"></p>
+
+    <div class="gallery">
+        <img src="images/pic1.jpeg">
+        <img src="images/pic2.jpeg">
+        <img src="images/pic3.jpeg">
+    </div>
+
+    <button onclick="toggleTheme()">🌙 Toggle Theme</button>
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+    Thank you for being there 💛
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
