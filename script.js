@@ -5,8 +5,12 @@ function openCard() {
     setTimeout(() => {
         document.querySelector(".envelope-container").style.display = "none";
         document.getElementById("card").style.display = "block";
-        startTyping();
-        showPopup();
+
+        // reset before typing
+        document.getElementById("poem").innerHTML = "";
+        i = 0;
+
+        startTyping(); // ❌ removed showPopup from here
     }, 1200);
 }
 
@@ -82,20 +86,23 @@ let i = 0;
 
 function startTyping() {
     let speed = 25;
+
     function type() {
         if (i < text.length) {
             document.getElementById("poem").innerHTML += text.charAt(i);
             i++;
             setTimeout(type, speed);
+        } else {
+            // ✅ SHOW POPUP ONLY AFTER TYPING FINISHES
+            showPopup();
         }
     }
+
     type();
 }
 
 function showPopup() {
-    setTimeout(() => {
-        document.getElementById("popup").style.display = "block";
-    }, 6000);
+    document.getElementById("popup").style.display = "block";
 }
 
 function toggleTheme() {
