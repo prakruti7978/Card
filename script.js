@@ -1,17 +1,11 @@
 function openCard() {
-    let envelope = document.querySelector(".envelope");
-    envelope.classList.add("open");
+    document.querySelector(".open-container").style.display = "none";
+    document.getElementById("card").style.display = "block";
 
-    setTimeout(() => {
-        document.querySelector(".envelope-container").style.display = "none";
-        document.getElementById("card").style.display = "block";
+    document.getElementById("poem").innerHTML = "";
+    i = 0;
 
-        // reset before typing
-        document.getElementById("poem").innerHTML = "";
-        i = 0;
-
-        startTyping();
-    }, 1200);
+    startTyping();
 }
 
 let text = `I don’t say this enough,
@@ -93,12 +87,7 @@ function startTyping() {
             i++;
             setTimeout(type, speed);
         }
-        // ✅ No popup call anymore
     }
 
     type();
-}
-
-function toggleTheme() {
-    document.body.classList.toggle("dark");
 }
