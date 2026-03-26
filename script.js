@@ -10,7 +10,7 @@ function openCard() {
         document.getElementById("poem").innerHTML = "";
         i = 0;
 
-        startTyping(); // ❌ removed showPopup from here
+        startTyping();
     }, 1200);
 }
 
@@ -92,17 +92,11 @@ function startTyping() {
             document.getElementById("poem").innerHTML += text.charAt(i);
             i++;
             setTimeout(type, speed);
-        } else {
-            // ✅ SHOW POPUP ONLY AFTER TYPING FINISHES
-            showPopup();
         }
+        // ✅ No popup call anymore
     }
 
     type();
-}
-
-function showPopup() {
-    document.getElementById("popup").style.display = "block";
 }
 
 function toggleTheme() {
