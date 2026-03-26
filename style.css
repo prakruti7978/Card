@@ -135,18 +135,6 @@ button {
     color: white;
 }
 
-/* Popup */
-.popup {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #ff6f91;
-    padding: 15px;
-    border-radius: 10px;
-    color: white;
-}
 
 /* 📱 MOBILE */
 @media (max-width: 600px) {
